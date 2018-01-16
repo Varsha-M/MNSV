@@ -22,6 +22,7 @@ import javax.swing.SwingConstants;
 
 public class GUI1
 {
+	/* Hello */
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
