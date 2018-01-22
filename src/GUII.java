@@ -1,4 +1,3 @@
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -20,93 +19,102 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-public class GUI1
-{
-	//hello
+public class GUII {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 JFrame jf=new JFrame();
-JPanel p = new JPanel();
+JPanel p = new JPanel(new GridBagLayout());
 
-GridLayout gl=new GridLayout(8,4);
+GridLayout gl=new GridLayout(9,4);
 jf.setLayout(gl);
 
 
-JLabel jl1=new JLabel("Nitrogen content in fertilizer:");
+JLabel jl1=new JLabel("Sand(In percentage)");
 jf.add(jl1);
 TextField tf1=new TextField(" ");
 jf.add(tf1);
 
+JLabel jl2=new JLabel("OC(Organic Carbon in mn)");
+jf.add(jl2);
+TextField tf2=new TextField(" ");
+jf.add(tf2);
 
-JLabel jl3=new JLabel("Phosphorous content in fertilizer:");
+JLabel jl3=new JLabel("Slit(In percentage)");
 jf.add(jl3);
 TextField tf3=new TextField(" ");
 jf.add(tf3);
 
+JLabel jl4=new JLabel("P(Phosphorous)");
+jf.add(jl4);
+TextField tf4=new TextField(" ");
+jf.add(tf4);
 
-JLabel jl5=new JLabel("Potassium content in fertilizer");
+JLabel jl5=new JLabel("Clay(In percentage)");
 jf.add(jl5);
 TextField tf5=new TextField(" ");
 jf.add(tf5);
 
+JLabel jl6=new JLabel("Zn(Zinc)");
+jf.add(jl6);
+TextField tf6=new TextField(" ");
+jf.add(tf6);
 
-JLabel jl7=new JLabel("Average rainfallin district: ");
+JLabel jl7=new JLabel("pH");
 jf.add(jl7);
 TextField tf7=new TextField(" ");
 jf.add(tf7);
 
+JLabel jl8=new JLabel("S(Sulpher)");
+jf.add(jl8);
+TextField tf8=new TextField(" ");
+jf.add(tf8);
 
-JLabel jl9=new JLabel("Average temperature in district: ");
+JLabel jl9=new JLabel("Ec(Electrical conductivity in mn)");
 jf.add(jl9);
 TextField tf9=new TextField(" ");
 jf.add(tf9);
 
+JLabel jl10=new JLabel("K(Potassium)");
+jf.add(jl10);
+TextField tf10=new TextField(" ");
+jf.add(tf10);
+
+JLabel jl18=new JLabel("Mn(Manganese)");
+jf.add(jl18);
+TextField tf18=new TextField(" ");
+jf.add(tf18);
+
+JLabel jl19=new JLabel("B(Boron)");
+jf.add(jl19);
+TextField tf19=new TextField(" ");
+jf.add(tf19);
 
 
-
-JLabel jl11=new JLabel("Precipitation amount in district: ");
+JLabel jl15=new JLabel(" ");
+jf.add(jl15);
+JLabel jl11=new JLabel("OR",SwingConstants.RIGHT);
 jf.add(jl11);
-TextField tf11=new TextField(" ");
-jf.add(tf11);
 
-JLabel jl14=new JLabel("Area in hectares: ");
+
+JLabel jl12=new JLabel(" ");
+jf.add(jl12);
+JLabel jl16=new JLabel(" ");
+jf.add(jl16);
+
+JLabel jl17=new JLabel(" ");
+jf.add(jl17);
+JLabel jl13=new JLabel(" ");
+jf.add(jl13);
+
+
+JLabel jl14=new JLabel("IMPORT SOIL DATA");
 jf.add(jl14);
 TextField tf14=new TextField(" ");
 jf.add(tf14);
 
-JLabel jl16=new JLabel("Production in tonnes: ");
-jf.add(jl16);
-TextField tf16=new TextField(" ");
-jf.add(tf16);
 
-
-JLabel jl17=new JLabel(" ");
-jf.add(jl17);
-JLabel jl25=new JLabel("OR",SwingConstants.RIGHT);
-jf.add(jl25);
-
-
-JLabel jl18=new JLabel(" ");
-jf.add(jl18);
-JLabel jl26=new JLabel(" ");
-jf.add(jl26);
-
-JLabel jl19=new JLabel(" ");
-jf.add(jl19);
-JLabel jl27=new JLabel(" ");
-jf.add(jl27);
-
-
-JLabel jl20=new JLabel("IMPORT CROP DATA");
-jf.add(jl20);
-TextField tf20=new TextField(" ");
-jf.add(tf20);
-
-JLabel l=new JLabel("<html><br></html>"); 
 JButton jb1=new JButton("submit");
-jb1.setAlignmentX(JButton.CENTER_ALIGNMENT);
-jb1.setHorizontalAlignment(JButton.CENTER);
 
 //jb1.setSize(300, 30);
 jb1.setBounds(130, 100, 100, 40);
@@ -132,7 +140,7 @@ jf.add(jb1);
 
 jb1.addActionListener(new ActionListener(){
 	public void actionPerformed(ActionEvent argo){
-		File f=new File("C:/Users/Dell/Desktop/Sample.txt");
+		File f=new File("C:/Users/Admin/Desktop/Sample.txt");
 		FileWriter fw=null;
 		try{
 			fw=new FileWriter(f);
@@ -142,7 +150,7 @@ jb1.addActionListener(new ActionListener(){
 			e.printStackTrace();
 		}
 		try{
-			fw.write(tf1.getText()+" "+tf2.getText()+" "+tf3.getText()+" "+tf4.getText()+" "+tf5.getText()+" "+tf6.getText()+" "+tf7.getText()+" "+tf8.getText()+" "+tf9.getText()+" "+tf10.getText()+" "+tf11.getText()+" "+tf12.getText()+" "+tf13.getText()+" "+tf14.getText()+" "+tf15.getText()+" "+tf16.getText()+" "+tf20.getText());
+			fw.write(tf1.getText()+" "+tf2.getText()+" "+tf3.getText()+" "+tf4.getText());
 		}
 		catch(IOException e)
 		{
@@ -159,19 +167,6 @@ jb1.addActionListener(new ActionListener(){
 		tf2.setText(" ");
 		tf3.setText(" ");
 		tf4.setText(" ");
-		tf5.setText(" ");
-		tf6.setText(" ");
-		tf7.setText(" ");
-		tf8.setText(" ");
-		tf9.setText(" ");
-		tf10.setText(" ");
-		tf11.setText(" ");
-		tf12.setText(" ");
-		tf13.setText(" ");
-		tf14.setText(" ");
-		tf15.setText(" ");
-		tf16.setText(" ");
-		tf20.setText(" ");
 	}
 	});
 /*jb2.addActionListener(new ActionListener(){
